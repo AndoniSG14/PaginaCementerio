@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        document.getElementById("miFormulario").addEventListener("submit", function(event) {
+          // Evita que el formulario se envíe automáticamente
+          event.preventDefault();
+          // Realiza la petición AJAX a procesar.php
+          // Aquí puedes agregar el código que ya tienes para hacer el insert
+          // ...
+          // Limpia el formulario después de enviarlo con éxito
+          document.getElementById("miFormulario").reset();
+        });
+      </script>
+      
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mi sitio web</title>
+    <style>
+        nav {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            nav a {
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <a class="active" href="index.html">Inicio</a>
+        <a href="formulario.html">Registro de Propietario</a>
+        <a href="buscarTumba.html">Buscar Tumba</a>
+    </nav>
+    <div class="banner">
+        <img src="img/banner.jpeg" alt="Banner">
+        <div class="banner-text">
+            <h1>Bienvenido al panteón Soledad</h1>
+        </div>
+    </div>
+
+    <div class="cuadro">
+        <form action="procesar.php" method="post" ">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="curp">CURP:</label>
+            <input type="text" id="curp" name="curp" required><br><br>
+
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+
+            <label for="lugar">Lugar de nacimiento:</label>
+            <input type="text" id="lugar" name="lugar" required><br><br>
+
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" name="calle" required><br><br>
+
+            <label for="num_interior">Número Interior:</label>
+            <input type="text" id="num_interior" name="num_interior"><br><br>
+
+            <label for="num_exterior">Número Exterior:</label>
+            <input type="text" id="num_exterior" name="num_exterior" required><br><br>
+
+            <label for="colonia">Colonia:</label>
+            <input type="text" id="colonia" name="colonia" required><br><br>
+
+            <label for="municipio">Municipio:</label>
+            <input type="text" id="municipio" name="municipio" required><br><br>
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required><br><br>
+
+            <label for="codigo_postal">Código Postal:</label>
+            <input type="text" id="codigo_postal" name="codigo_postal" required><br><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required><br><br>
+
+            <button type="submit" class="enviar-btn">Pre-Registrar</button>
+        </form>
+    </div>
+    
+</body>
+<footer>
+    <div class="container">
+        <div class="contact-info">
+            <h3>Contacto</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección: 365 Calle Constitución, Autlán de Navarro, Jalisco,
+                48900</p>
+            <p><i class="fas fa-envelope"></i> Correo electrónico: gobautlan@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i> Teléfono: 317 381 1116</p>
+        </div>
+        <div class="social-media">
+            <h3>Redes Sociales</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/pages/Panteon-La-Soledad-Autlan/202676689940396"><img
+                            src="img/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.twitter.com/"><img src="img/twitwr.png" alt="Twitter"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="img/instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</html>

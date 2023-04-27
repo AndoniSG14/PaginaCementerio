@@ -1,0 +1,22 @@
+<script>
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita el comportamiento predeterminado del formulario
+
+  const formData = new FormData(form);
+
+  fetch('procesar.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    // Maneja la respuesta del servidor
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+});
+</script>
